@@ -36,8 +36,8 @@ button.on("click", function() {
 
     // Assign the current value of each input box to a variable
     dateInput = document.getElementById('datetime').value
-    cityInput = document.getElementById('city').value 
-    stateInput = document.getElementById('state').value 
+    cityInput = document.getElementById('city').value
+    stateInput = document.getElementById('state').value
     countryInput = document.getElementById('country').value
     shapeInput = document.getElementById('shape').value
     
@@ -66,7 +66,7 @@ button.on("click", function() {
     }
     else {
         newData = newData.filter(function(sighting) {
-        return sighting.city == cityInput
+        return sighting.city == cityInput.toLowerCase()
         })
     }
 
@@ -77,7 +77,7 @@ button.on("click", function() {
     }
     else{
         newData = newData.filter(function(sighting) {
-        return sighting.state == stateInput
+        return sighting.state == stateInput.toLowerCase()
         })
     }
 
@@ -87,7 +87,7 @@ button.on("click", function() {
     }
     else {
         newData = newData.filter(function(sighting) {
-        return sighting.country == countryInput
+        return sighting.country == countryInput.toLowerCase()
         })
     }
 
@@ -97,7 +97,7 @@ button.on("click", function() {
     }
     else {
         newData = newData.filter(function(sighting) {
-        return sighting.shape == shapeInput
+        return sighting.shape == shapeInput.toLowerCase()
         })
     }
 
@@ -114,7 +114,3 @@ newData.forEach((report) => {
 
  });
 
-
-inputField.on("change", function() {
-    console.log(document.getElementById('datetime').value)
-  });
