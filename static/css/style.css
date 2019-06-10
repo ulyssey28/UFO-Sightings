@@ -149,7 +149,7 @@ select {
   #table-area thead {
     display: none;
   }
-
+  
   #table-area tr td:first-child {
     font-size: 1.8em;
     font-weight: bold;
